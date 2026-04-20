@@ -8,5 +8,5 @@ IIFEs/module pattern and factory functions.
 
 ---
 
-There is a similar [project](https://github.com/fell-z/tic-tac-toe-odin)
+There is a similar [project](https://github.com/fell-z/tic-tac-toe-rb-odin)
 but made in Ruby earlier in the Ruby on Rails Path.
