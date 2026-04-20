@@ -5,3 +5,80 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 16px;
+  margin: 32px;
+
+  font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+label,
+input,
+button {
+  display: block;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: lightskyblue;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: hsl(from lightskyblue h s calc(l + 5));
+  }
+
+  &:active {
+    background-color: hsl(from lightskyblue h s calc(l - 5));
+  }
+}
+
+output {
+  font-size: 1.3rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  div:has(label) {
+    display: flex;
+    gap: 16px;
+  }
+
+  button {
+    padding: 8px 32px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+  }
+}
+
+.board {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+
+  border: 1px solid black;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: default;
+}
